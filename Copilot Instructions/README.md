@@ -39,5 +39,6 @@ If the excludeAgent keyword is not included in the front matterblock, both Copil
 Add your custom instructions in natural language, using Markdown format. Whitespace between instructions is ignored, so the instructions can be written as a single paragraph, each on a new line, or separated by blank lines for legibility.
 
 
-
+interesting projects:
+https://github.com/github/awesome-copilot
 
