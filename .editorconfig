@@ -95,23 +95,22 @@ dotnet_diagnostic.RCS1225.severity = warning # Make class sealed.
 dotnet_diagnostic.RCS1232.severity = warning # Order elements in documentation comment.
 
 # Diagnostics elevated as warnings
-dotnet_diagnostic.CA1000.severity = warning # Do not declare static members on generic types
 dotnet_diagnostic.CA1050.severity = warning # Declare types in namespaces
 dotnet_diagnostic.CA1063.severity = warning # Implement IDisposable correctly
 dotnet_diagnostic.CA1064.severity = warning # Exceptions should be public
 dotnet_diagnostic.CA1416.severity = warning # Validate platform compatibility
 dotnet_diagnostic.CA1508.severity = warning # Avoid dead conditional code
-dotnet_diagnostic.CA1805.severity = warning # Member is explicitly initialized to its default value
+dotnet_diagnostic.CA1805.severity = suggestion # Member is explicitly initialized to its default value
 dotnet_diagnostic.CA1822.severity = suggestion # Member does not access instance data and can be marked as static
 dotnet_diagnostic.CA1852.severity = warning # Sealed classes
-dotnet_diagnostic.CA1859.severity = warning # Use concrete types when possible for improved performance
+dotnet_diagnostic.CA1859.severity = none # Use concrete types when possible for improved performance
 dotnet_diagnostic.CA1860.severity = warning # Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance
-dotnet_diagnostic.CA2007.severity = warning # Do not directly await a Task
-dotnet_diagnostic.CA2201.severity = warning # Exception type System.Exception is not sufficiently specific
+dotnet_diagnostic.CA2007.severity = suggestion # Do not directly await a Task
+dotnet_diagnostic.CA2201.severity = suggestion # Exception type System.Exception is not sufficiently specific
 
 dotnet_diagnostic.IDE0001.severity = warning # Simplify name
 dotnet_diagnostic.IDE0005.severity = warning # Remove unnecessary using directives
-dotnet_diagnostic.IDE0009.severity = warning # Add this or Me qualification
+dotnet_diagnostic.IDE0009.severity = none # Add this or Me qualification
 dotnet_diagnostic.IDE0011.severity = warning # Add braces
 dotnet_diagnostic.IDE0018.severity = warning # Inline variable declaration
 dotnet_diagnostic.IDE0032.severity = warning # Use auto-implemented property
@@ -132,7 +131,7 @@ dotnet_diagnostic.IDE0161.severity = warning # Use file-scoped namespace
 dotnet_diagnostic.IDE0280.severity = warning # Use nameof
 
 dotnet_diagnostic.VSTHRD111.severity = warning # Use .ConfigureAwait(bool)
-dotnet_diagnostic.VSTHRD200.severity = warning # Use Async suffix for async methods
+dotnet_diagnostic.VSTHRD200.severity = none # Use Async suffix for async methods
 
 dotnet_diagnostic.RCS1021.severity = warning # Use expression-bodied lambda.
 dotnet_diagnostic.RCS1061.severity = warning # Merge 'if' with nested 'if'.
@@ -159,7 +158,6 @@ dotnet_diagnostic.IDE0051.severity = warning # Remove unused private member
 dotnet_diagnostic.IDE0052.severity = warning # Remove unread private member
 dotnet_diagnostic.IDE0059.severity = warning # Unnecessary assignment of a value
 dotnet_diagnostic.IDE0110.severity = warning # Remove unnecessary discards
-dotnet_diagnostic.IDE1006.severity = warning # Naming rule violations
 
 # Suppressed diagnostics
 dotnet_diagnostic.CA1002.severity = none # Change 'List<string>' in '...' to use 'Collection<T>' ...
@@ -181,7 +179,7 @@ dotnet_diagnostic.CA1848.severity = none # For improved performance, use the Log
 dotnet_diagnostic.CA1849.severity = none # Use async equivalent; analyzer is currently noisy
 dotnet_diagnostic.CA1865.severity = none # StartsWith(char)
 dotnet_diagnostic.CA1867.severity = none # EndsWith(char)
-dotnet_diagnostic.CS1998.severity = none # async method lacks 'await' operators and will run synchronously
+dotnet_diagnostic.CS1998.severity = error # async method lacks 'await' operators and will run synchronously
 dotnet_diagnostic.CA2000.severity = none # Call System.IDisposable.Dispose on object before all references to it are out of scope
 dotnet_diagnostic.CA2225.severity = none # Operator overloads have named alternates
 dotnet_diagnostic.CA2227.severity = none # Change to be read-only by removing the property setter
@@ -194,7 +192,7 @@ dotnet_diagnostic.CA5394.severity = none # Do not use insecure sources of random
 
 dotnet_diagnostic.VSTHRD003.severity = none # Waiting on thread from another context
 dotnet_diagnostic.VSTHRD103.severity = none # Use async equivalent; analyzer is currently noisy
-dotnet_diagnostic.VSTHRD111.severity = none # Use .ConfigureAwait(bool) is hidden by default, set to none to prevent IDE from changing on autosave
+dotnet_diagnostic.VSTHRD111.severity = warning # Use .ConfigureAwait(bool) is hidden by default, set to none to prevent IDE from changing on autosave
 
 dotnet_diagnostic.xUnit1004.severity = none # Test methods should not be skipped. Remove the Skip property to start running the test again.
 dotnet_diagnostic.xUnit1042.severity = none # Untyped data rows
@@ -270,11 +268,6 @@ dotnet_naming_style.prefix_underscore.required_prefix = _
 dotnet_naming_rule.private_fields_with_underscore.symbols  = private_fields
 dotnet_naming_rule.private_fields_with_underscore.style    = prefix_underscore
 dotnet_naming_rule.private_fields_with_underscore.severity = warning
-
-dotnet_naming_style.end_in_async.required_prefix =
-dotnet_naming_style.end_in_async.required_suffix = Async
-dotnet_naming_style.end_in_async.capitalization = pascal_case
-dotnet_naming_style.end_in_async.word_separator =
 
 # Constants starts with Uppercase
 dotnet_naming_rule.constants_should_be_upper_case.severity = suggestion
