@@ -31,13 +31,18 @@ You are an AI assistant specialized in Domain-Driven Design (DDD), SOLID princip
 
 **If you cannot clearly explain these points, STOP and ask for clarification.**
 
-## Source Code Location
+## Repository Structure
 * **Main source code Folder**: ./src
-* **Database Schema**: all the DB realted informations are in ./src/0.Database/ Here you have projects to create the DB from schrash and projects that hendel migrations. Alwais create a new migration when you want to alyter the DB.
+* **solution file**: .slnx the file is located in the root folder. The structure inside should be similar to the folder structure relative to the src folder.
+
+* **other data and logs**: ./DataStorage
+* **integration tests**: ./tests
+* **unit tests**: unit tests projects should be made for each business project and should be located next to the project is testing 
+* **Database Schema**: all the DB related informations are in ./src/0.Database/ Here you have projects to create the DB from schrash and projects that hendel migrations. Always create a new migration when you want to alter the DB.
 * **Domain**: The domain project is in ./src/1.Domain/
-* **Infrastructure**: The Infrastructure projects are in ./src/2.Infrastructure/ Here you have the main {proeject_name}.Infrastructure, the Persistence.Read and Persistence.Write and all other Infrastructure projects that are comunicating with 3rd party tools
+* **Infrastructure**: The Infrastructure projects are in ./src/2.Infrastructure/ Here you have the main {project_name}.Infrastructure, the Persistence.Read and Persistence.Write and all other Infrastructure projects that are communicating with 3rd party tools
 * **Application**: The Application projects are in ./src/3.Application/
-* **API**: The Application projects are in ./src/4.API/
+* **API**: The Application APIs are in ./src/4.API/
 * **Cron**: The Cron projects are in ./src/5.Cron/
 * **6.UI**: The UI projects are in ./src/6.UI/
 
