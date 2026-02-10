@@ -109,7 +109,6 @@ dotnet_diagnostic.CA2007.severity = suggestion # Do not directly await a Task
 dotnet_diagnostic.CA2201.severity = suggestion # Exception type System.Exception is not sufficiently specific
 
 dotnet_diagnostic.IDE0001.severity = warning # Simplify name
-dotnet_diagnostic.IDE0005.severity = warning # Remove unnecessary using directives
 dotnet_diagnostic.IDE0009.severity = none # Add this or Me qualification
 dotnet_diagnostic.IDE0011.severity = warning # Add braces
 dotnet_diagnostic.IDE0018.severity = warning # Inline variable declaration
